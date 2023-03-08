@@ -11,8 +11,11 @@
     if (request.getMethod().equalsIgnoreCase("POST")) {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        request.setAttribute("username", username);
+        request.getRequestDispatcher("/user-profile.jsp").forward(request, response);
         if (username.equals("admin") && password.equals("password")) {
-            response.sendRedirect("/profile.jsp");
+            request.setAttribute("username", username);
+            request.getRequestDispatcher("/profile.jsp").forward(request, response);
         }
     }
 %>
