@@ -71,6 +71,7 @@ public class BeanTest {
         quotes.add(quote3);
         quotes.add(quote4);
 
+        System.out.println("********************");
         // Iterate over the ArrayList and print out the content and author name of each quote
         for (Quote quote : quotes) {
             System.out.println("Quote content: " + quote.getContent());
