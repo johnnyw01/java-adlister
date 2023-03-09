@@ -78,6 +78,7 @@ public class BeanTest {
             System.out.println("Author name: " + quote.getAuthor().getFirstName() + " " + quote.getAuthor().getLastName());
             System.out.println();
         }
+        System.out.println("********************");
 
     }
 }
