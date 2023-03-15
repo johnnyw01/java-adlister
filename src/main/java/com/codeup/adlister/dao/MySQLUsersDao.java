@@ -13,7 +13,7 @@ public class MySQLUsersDao implements Users {
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
                 config.getUrl(),
-                config.getUser(),
+                config.getUsername(),
                 config.getPassword()
             );
         } catch (SQLException e) {
@@ -33,6 +33,7 @@ public class MySQLUsersDao implements Users {
             throw new RuntimeException("Error finding a user by username", e);
         }
     }
+
 
     @Override
     public Long insert(User user) {
